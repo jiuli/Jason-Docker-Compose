@@ -1,7 +1,8 @@
 version: '3.4'
 services:
   activemq-1:
-    image: activemq
+    build: .
+    image: jason-activemq
     ports:  
       - "8161:8161"
       - "61616:61616"
