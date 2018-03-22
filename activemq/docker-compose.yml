@@ -1,8 +1,8 @@
 version: '3.4'
 services:
   activemq-1:
-    build: .
-    image: jason-activemq
+  #  build: .
+    image: docker.io/webcenter/activemq:latest
     ports:  
       - "8161:8161"
       - "61616:61616"
