@@ -5,7 +5,7 @@ services:
     port:
       - "8161:8161"
       - "61616:61616"
-    volumnes:
+    volumes:  
       - /home/activemq/conf:/opt/activemq/conf
       - /home/activemq/data:/opt/activemq/data
     restart: always
