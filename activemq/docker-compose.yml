@@ -2,12 +2,14 @@ version: '3.4'
 services:
   activemq-1:
   #  build: .
-    image: docker.io/webcenter/activemq:latest
+  #当build存在时，image为自定义命名，如果build不存在，即现有的image名称
+    image: docker.io/webcenter/activemq:latest 
     ports:  
       - "8161:8161"
       - "61616:61616"
-#    volumes:  
-#      - /home/activemq/conf:/opt/activemq/conf
-#      - /home/activemq/data:/opt/activemq/data
+    volumes:  
+    #启动容器时，共享目录为空，容器中映射的目录也会为空。
+      - /home/activemq/conf:/opt/activemq/conf  
+      - /home/activemq/data:/opt/activemq/data
     restart: always
     
