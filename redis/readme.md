@@ -1,0 +1,1 @@
+docker exec -it 容器id redis-cli [-a password] 如果加上秘密（redis.conf加一行：requirepass 123456）
