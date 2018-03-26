@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  redis-1:
+    build: .
+    image: redis-single 
+    ports:  
+      - "6379:6379"
+#    volumes:  
+#      - /home/redis/conf:/usr/local/etc/redis/redis.conf
+#      - /home/redis/data:/data
+    restart: always
+    

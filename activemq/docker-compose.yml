@@ -9,6 +9,7 @@ services:
       - "61616:61616"
     volumes:  
     #启动容器时，共享目录为空，容器中映射的目录也会为空。所以得docker cp 复制应用中的conf到共享目录中，再做修改。
+    # 共享目录中的文件修改了，自动更新容器中映射文件。
       - /home/activemq/conf:/opt/activemq/conf  
       - /home/activemq/data:/opt/activemq/data
     restart: always
